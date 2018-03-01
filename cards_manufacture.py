@@ -17,9 +17,9 @@ omise.api_public = config['omise']['api_public']
 
 cards_amount = int(sys.argv[1])
 
-customer = omise.Customer.retrieve('cust_test_5azhl5kaxja800zsyfs')
+customer = omise.Customer.retrieve('cust_test_5b4fhq8na545dyxhhdq')
 
-for n in range(1, cards_amount):
+for n in range(0, cards_amount):
     token = omise.Token.create(
         name='Somchai Prasert',
         number='4242424242424242',
@@ -32,4 +32,4 @@ for n in range(1, cards_amount):
 
     customer.update(card=token.id)
 
-print('{} cards have been created for {}'.format(cards_amount, customer.id))
+print('{} card(s) have been created for {}'.format(cards_amount, customer.id))

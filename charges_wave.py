@@ -18,15 +18,15 @@ omise.api_public = config['omise']['api_public']
 
 charges_amount = int(sys.argv[1])
 
-customer = omise.Customer.retrieve('cust_test_5aa1rasgyscgk8ra7w6')
+customer = omise.Customer.retrieve('cust_test_5b4fhq8na545dyxhhdq')
 
-for n in range(1, charges_amount):
+for n in range(0, charges_amount):
     charge = omise.Charge.create(
         amount=int(str(random.randint(20, 100)) + '00'),
         currency='thb',
         description='charge no.' + str(random.randrange(100)),
         customer=customer.id,
-        card='card_test_5aa1rarjac6tnqcdhmx',
+        card='card_test_5b4fhq6kixz8ks2egae',
     )
 
-print('{} charges have been created'.format(charges_amount))
+print('{} charge(s) have been created'.format(charges_amount))
