@@ -1,3 +1,16 @@
+*.pyc
+*.egg
+*.egg-info
+.eggs/
+.vagrant/
+dist/
+
+# Tests
+.coverage
+.noseids
+.tox/
+
+# Configuration
 development.cfg
 staging.cfg
 production.cfg
