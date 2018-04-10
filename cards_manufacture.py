@@ -7,8 +7,8 @@ import omise
 ENV_MODE = os.environ.get('ENV_MODE', 'development')
 
 config = configparser.ConfigParser()
-config.read_file(open('default.cfg'))
-config.read('{}.cfg'.format(ENV_MODE))
+config.read_file(open('settings/default.cfg'))
+config.read('settings/{}.cfg'.format(ENV_MODE))
 
 omise.api_main = config['omise']['api_main']
 omise.api_vault = config['omise']['api_vault']
@@ -17,7 +17,7 @@ omise.api_public = config['omise']['api_public']
 
 cards_amount = int(sys.argv[1])
 
-customer = omise.Customer.retrieve('cust_test_5b4fhq8na545dyxhhdq')
+customer = omise.Customer.retrieve('cust_xxxxx')
 
 for n in range(0, cards_amount):
     token = omise.Token.create(
