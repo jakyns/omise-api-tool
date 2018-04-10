@@ -15,9 +15,10 @@ omise.api_vault = config['omise']['api_vault']
 omise.api_secret = config['omise']['api_secret']
 omise.api_public = config['omise']['api_public']
 
-cards_amount = int(sys.argv[1])
+customer_id = sys.argv[1]
+cards_amount = int(sys.argv[2])
 
-customer = omise.Customer.retrieve('cust_xxxxx')
+customer = omise.Customer.retrieve(customer_id)
 
 for n in range(0, cards_amount):
     token = omise.Token.create(

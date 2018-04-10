@@ -11,6 +11,6 @@ dist/
 .tox/
 
 # Configuration
-development.cfg
-staging.cfg
-production.cfg
+config/development.cfg
+config/staging.cfg
+config/production.cfg
