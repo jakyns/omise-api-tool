@@ -7,8 +7,8 @@ import omise
 ENV_MODE = os.environ.get('ENV_MODE', 'development')
 
 config = configparser.ConfigParser()
-config.read_file(open('settings/default.cfg'))
-config.read('settings/{}.cfg'.format(ENV_MODE))
+config.read_file(open('config/default.cfg'))
+config.read('config/{}.cfg'.format(ENV_MODE))
 
 omise.api_main = config['omise']['api_main']
 omise.api_vault = config['omise']['api_vault']
