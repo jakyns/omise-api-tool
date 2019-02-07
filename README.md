@@ -1,6 +1,28 @@
-# Omise Python Tools
+# Omise API Tool
 
-create `development.cfg` or `production.cfg` in `config` folder by copying templates from `default.cfg` and fill in the values
+Omise API Tool developing for making user to be more convenient calling Omise 
+API in some scenarios developed by Python. This repository uses pipenv to 
+manage all dependencies from Pipfile.
+
+```python
+pipenv shell
+pipenv install
+```
+
+create `development.cfg` or `production.cfg` in `config` folder by copying 
+templates from `default.cfg` and fill in the values
+
+## flow charge
+
+Python script for generating token, create customer with card then create first
+charge
+
+### Usage
+
+```python
+>>> import omise
+>>> python flow_charge.py
+```
 
 ## charges wave
 
