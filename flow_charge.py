@@ -1,7 +1,5 @@
-import configparser
 import os
 import random
-import sys
 
 import omise
 
